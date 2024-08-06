@@ -102,7 +102,7 @@ import {
 
 export function RecentOrders() {
     return (
-        <div className=" ">
+        <div className=" col-span-1 md:col-span-4 ">
             {/* <p className="bg-[#202028] px-4  font-extrabold text-2xl rounded-t-xl ">Recent Orders</p> */}
             <div className="flex items-center justify-between px-4 bg-[#202028] rounded-t-xl">
                 <p className=" font-extrabold text-2xl py-2 ">Recent Orders</p>

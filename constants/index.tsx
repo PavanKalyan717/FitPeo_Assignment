@@ -13,14 +13,14 @@ export interface Stat {
 
 export const statsData: Stat[] = [
     {
-        icon: <TbShoppingBagPlus size={40} className='p-1 bg-[#2a3467] rounded-xl' style={{ color: '#4062fc' }} />,
+        icon: <TbShoppingBagPlus size={40} className='p-1 mx-2 rounded-xl' style={{ color: '#4062fc', backgroundColor: '#2a3467' }} />,
         title: "Total Orders",
         value: 75,
         change: 3,
         isIncrease: true
     },
     {
-        icon: <TbShoppingBagCheck size={40} className='p-1 bg-[#165245] rounded-xl' style={{ color: '#00c98d' }
+        icon: <TbShoppingBagCheck size={40} className='p-1 mx-2 rounded-xl' style={{ color: '#00c98d', backgroundColor: '#165245' }
         } />,
         title: "Total Delivered",
         value: 75,
@@ -28,7 +28,7 @@ export const statsData: Stat[] = [
         isIncrease: false
     },
     {
-        icon: <TbShoppingBagX size={40} className='p-1 bg-[#5f3237] rounded-xl' style={{ color: "#f25f5f" }
+        icon: <TbShoppingBagX size={40} className='p-1 mx-2 rounded-xl' style={{ color: "#f25f5f", backgroundColor: '#5f3237' }
         } />,
         title: "Total Cancelled",
         value: 75,
@@ -36,7 +36,7 @@ export const statsData: Stat[] = [
         isIncrease: true
     },
     {
-        icon: <MdCurrencyExchange size={40} className='p-1 bg-[#5b2a4a] rounded-xl' style={{ color: '#cd3d91' }
+        icon: <MdCurrencyExchange size={40} className='p-1 mx-2 rounded-xl' style={{ color: '#cd3d91', backgroundColor: '#5b2a4a' }
         } />,
         title: "Total Revenue",
         value: 75,

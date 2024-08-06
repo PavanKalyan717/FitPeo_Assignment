@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineHome } from "react-icons/ai";
 import { RiBarChartBoxLine } from "react-icons/ri";
 import { CiWallet } from "react-icons/ci";
@@ -25,8 +25,9 @@ const SideBar: React.FC = () => {
         return selectedIcon === iconName ? selectedIconColor : defaultIconColor;
     };
 
+
     return (
-        <div className='bg-[#202028] flex flex-col justify-between min-h-full '>
+        <div className='bg-inherit md:bg-[#202028] flex flex-col justify-between h-[90vh] md:fixed md:w-16 '>
             <div className='flex flex-col gap-8 pt-4'>
 
                 <Tooltip content="Home" className=' bg-slate-500 rounded-xl text-white'>
@@ -76,7 +77,7 @@ const SideBar: React.FC = () => {
             </div>
             <Tooltip content="Logout" className=' bg-slate-500 rounded-xl text-white'>
 
-                <div className='flex justify-center mb-14 cursor-pointer'>
+                <div className='flex justify-center cursor-pointer my-8 md:mb-4'>
                     <RiLogoutCircleRLine size={30} />
                 </div>
             </Tooltip>

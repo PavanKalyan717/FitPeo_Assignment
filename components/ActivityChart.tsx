@@ -22,9 +22,8 @@ const chartConfig = {
 
 export function ActivityChart() {
     return (
-        <div className="">
-
-            <div className="bg-[#202028] rounded-lg">
+        <div className="col-span-1 md:col-span-4">
+            <div className="bg-[#202028] h-[240px] rounded-lg">
                 <div className="flex items-center justify-between px-4">
                     <p className=" font-extrabold text-2xl py-4 ">Activity Chart</p>
                 </div>
