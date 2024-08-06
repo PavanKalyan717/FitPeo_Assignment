@@ -102,8 +102,11 @@ import {
 
 export function RecentOrders() {
     return (
-        <div className="">
-            <p className="bg-[#202028] px-4  font-extrabold text-2xl rounded-t-xl ">Recent Orders</p>
+        <div className=" ">
+            {/* <p className="bg-[#202028] px-4  font-extrabold text-2xl rounded-t-xl ">Recent Orders</p> */}
+            <div className="flex items-center justify-between px-4 bg-[#202028] rounded-t-xl">
+                <p className=" font-extrabold text-2xl py-2 ">Recent Orders</p>
+            </div>
             <Table className="bg-[#202028] rounded-b-xl ">
                 <TableHeader>
                     <TableRow>
@@ -120,9 +123,9 @@ export function RecentOrders() {
                             <TableCell>{order.orderNo}</TableCell>
                             <TableCell className="">{order.amount}</TableCell>
                             <TableCell className=''>
-                                <p className={`px-2 py-[2px] inline rounded-full text-white ${order.status === "Delivered" ? "bg-green-500" :
-                                    order.status === "Pending" ? "bg-blue-500" :
-                                        "bg-red-500"
+                                <p className={`px-2 py-[2px] inline rounded-full text-white ${order.status === "Delivered" ? "bg-[#165346]" :
+                                    order.status === "Pending" ? "bg-[#293368]" :
+                                        "bg-[#5c3337]"
                                     }`}>
                                     {order.status}
                                 </p>

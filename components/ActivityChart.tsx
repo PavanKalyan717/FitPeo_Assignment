@@ -26,7 +26,7 @@ export function ActivityChart() {
 
             <div className="bg-[#202028] rounded-lg">
                 <div className="flex items-center justify-between px-4">
-                    <p>Activity Chart</p>
+                    <p className=" font-extrabold text-2xl py-4 ">Activity Chart</p>
                 </div>
                 <ChartContainer config={chartConfig}
                     className="h-[170px] w-full rounded-xl px-4"

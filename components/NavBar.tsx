@@ -5,6 +5,8 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { VscBellDot } from "react-icons/vsc";
 import { IoSearch } from "react-icons/io5";
 import Image from 'next/image';
+import { Tooltip } from '@nextui-org/tooltip';
+import { Button } from '@nextui-org/button';
 
 const NavBar = () => {
     return (
@@ -18,17 +20,28 @@ const NavBar = () => {
                 </div>
             </div>
             <div className='flex gap-2 items-center p-5'>
-                <div className=' bg-dark-500 p-2 rounded-full'>
-                    <HiOutlineMail />
-                </div>
-                <div className=' bg-dark-500 p-2 rounded-full'>
-                    <IoSettingsOutline />
-                </div>
-                <div className=' bg-dark-500 p-2 rounded-full'>
+                <Tooltip content="Mail" className=' bg-slate-500 rounded-xl text-white'>
 
-                    <VscBellDot />
-                </div>
-                <div className='relative bg-dark-500 p-2 rounded-full overflow-hidden w-10 h-10'>
+                    <button className=' bg-dark-500 p-2 rounded-full cursor-pointer'>
+                        <HiOutlineMail />
+                    </button>
+                </Tooltip>
+                <Tooltip content="Settings" className=' bg-slate-500 rounded-xl text-white'>
+
+                    <button className=' bg-dark-500 p-2 rounded-full cursor-pointer'>
+                        <IoSettingsOutline />
+                    </button>
+                </Tooltip>
+                <Tooltip content="Notifications" className=' bg-slate-500 rounded-xl text-white'>
+
+                    <button className=' bg-dark-500 p-2 rounded-full cursor-pointer'>
+
+                        <VscBellDot />
+                    </button>
+                </Tooltip>
+
+
+                <div className='relative bg-dark-500 p-2 rounded-full overflow-hidden w-10 h-10 cursor-pointer'>
                     <Image src='/assets/navlogo.jpeg' alt="" className=' object-cover rounded-full'
                         layout='fill' />
                 </div>

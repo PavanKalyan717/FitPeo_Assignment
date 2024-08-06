@@ -18,7 +18,7 @@ const DashBoard = () => {
                     <NetProfit />
                 </div>
             </div>
-            <div className='flex items-center justify-center px-8 h-[200px] overflow-auto '>
+            <div className='flex items-center justify-center px-8 h-[250px] overflow-auto '>
                 <div className='w-[60%] '>
                     <ActivityChart />
                 </div>
@@ -26,7 +26,7 @@ const DashBoard = () => {
                     <GoalsSection />
                 </div>
             </div>
-            <div className='flex items-center justify-center px-8 h-[400px] overflow-auto '>
+            <div className='flex items-center justify-center px-8 h-[450px] overflow-auto '>
                 <div className='w-[60%] '>
                     <RecentOrders />
                 </div>
