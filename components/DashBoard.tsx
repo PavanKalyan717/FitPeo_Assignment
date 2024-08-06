@@ -5,13 +5,12 @@ import { RecentOrders } from './RecentOrders'
 import CustomerFeedback from './CustomerFeedback'
 import NetProfit from './NetProfit'
 import GoalsSection from './GoalsSection'
-import { RadialChart } from './RadialChart'
 
 const DashBoard = () => {
     return (
         <div className='flex flex-col '>
             <p className=' font-extrabold text-[20px] px-8 pt-4'>DashBoard</p>
-            <div className='flex items-center justify-center px-8 h-[400px] overflow-auto '>
+            <div className='flex items-center justify-center px-8 h-[200px] overflow-auto '>
                 <div className='w-[60%] '>
                     <Stats />
                 </div>

@@ -5,10 +5,10 @@ import { RadialChart } from './RadialChart'
 const NetProfit = () => {
     return (
         <div className='flex  bg-[#202028] h-[150px]  px-10 rounded-xl'>
-            <div>
+            <div className='flex flex-col justify-evenly'>
                 <p>Net Profit</p>
                 <p className='font-extrabold text-3xl'>$6759.25</p>
-                <div className='flex items-end'>
+                <div className='flex items-end text-green-500'>
                     <FaSortUp />
                     <p>3%</p>
                 </div>

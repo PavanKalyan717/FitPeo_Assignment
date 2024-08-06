@@ -5,11 +5,12 @@ import { RiBarChartBoxLine } from "react-icons/ri";
 import { CiWallet } from "react-icons/ci";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { BsClipboard2Check } from "react-icons/bs";
+import { RiLogoutCircleRLine } from "react-icons/ri";
 
 const iconContainerClass = 'flex items-center justify-center cursor-pointer';
 const selectedBorderClass = 'border-4 border-y-0 border-r-0 border-l-[#7294ff]';
 const unselectedBorderClass = 'border-4 border-y-0 border-r-0 border-l-transparent';
-const selectedIconColor = '#7294ff';  // Tailwind's purple-700 color
+const selectedIconColor = '#7294ff';
 const defaultIconColor = 'white';
 
 const SideBar: React.FC = () => {
@@ -24,36 +25,41 @@ const SideBar: React.FC = () => {
     };
 
     return (
-        <div className='bg-[#202028] flex flex-col min-h-full gap-8 pt-4'>
-            <div
-                className={`${iconContainerClass} ${selectedIcon === 'home' ? selectedBorderClass : unselectedBorderClass}`}
-                onClick={() => handleIconClick('home')}
-            >
-                <AiOutlineHome size={30} color={getIconColor('home')} />
+        <div className='bg-[#202028] flex flex-col justify-between min-h-full '>
+            <div className='flex flex-col gap-8 pt-4'>
+                <div
+                    className={`${iconContainerClass} ${selectedIcon === 'home' ? selectedBorderClass : unselectedBorderClass}`}
+                    onClick={() => handleIconClick('home')}
+                >
+                    <AiOutlineHome size={30} color={getIconColor('home')} />
+                </div>
+                <div
+                    className={`${iconContainerClass} ${selectedIcon === 'chart' ? selectedBorderClass : unselectedBorderClass}`}
+                    onClick={() => handleIconClick('chart')}
+                >
+                    <RiBarChartBoxLine size={30} color={getIconColor('chart')} />
+                </div>
+                <div
+                    className={`${iconContainerClass} ${selectedIcon === 'clipboard' ? selectedBorderClass : unselectedBorderClass}`}
+                    onClick={() => handleIconClick('clipboard')}
+                >
+                    <BsClipboard2Check size={30} color={getIconColor('clipboard')} />
+                </div>
+                <div
+                    className={`${iconContainerClass} ${selectedIcon === 'wallet' ? selectedBorderClass : unselectedBorderClass}`}
+                    onClick={() => handleIconClick('wallet')}
+                >
+                    <CiWallet size={30} color={getIconColor('wallet')} />
+                </div>
+                <div
+                    className={`${iconContainerClass} ${selectedIcon === 'bag' ? selectedBorderClass : unselectedBorderClass}`}
+                    onClick={() => handleIconClick('bag')}
+                >
+                    <IoBagCheckOutline size={30} color={getIconColor('bag')} />
+                </div>
             </div>
-            <div
-                className={`${iconContainerClass} ${selectedIcon === 'chart' ? selectedBorderClass : unselectedBorderClass}`}
-                onClick={() => handleIconClick('chart')}
-            >
-                <RiBarChartBoxLine size={30} color={getIconColor('chart')} />
-            </div>
-            <div
-                className={`${iconContainerClass} ${selectedIcon === 'clipboard' ? selectedBorderClass : unselectedBorderClass}`}
-                onClick={() => handleIconClick('clipboard')}
-            >
-                <BsClipboard2Check size={30} color={getIconColor('clipboard')} />
-            </div>
-            <div
-                className={`${iconContainerClass} ${selectedIcon === 'wallet' ? selectedBorderClass : unselectedBorderClass}`}
-                onClick={() => handleIconClick('wallet')}
-            >
-                <CiWallet size={30} color={getIconColor('wallet')} />
-            </div>
-            <div
-                className={`${iconContainerClass} ${selectedIcon === 'bag' ? selectedBorderClass : unselectedBorderClass}`}
-                onClick={() => handleIconClick('bag')}
-            >
-                <IoBagCheckOutline size={30} color={getIconColor('bag')} />
+            <div className='flex justify-center mb-14'>
+                <RiLogoutCircleRLine size={30} />
             </div>
         </div>
     );

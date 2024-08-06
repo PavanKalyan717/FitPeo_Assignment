@@ -103,8 +103,8 @@ import {
 export function RecentOrders() {
     return (
         <div className="">
-            <Table className="bg-[#202028] rounded-xl">
-                {/* <TableCaption>A list of your recent orders.</TableCaption> */}
+            <p className="bg-[#202028] px-4  font-extrabold text-2xl rounded-t-xl ">Recent Orders</p>
+            <Table className="bg-[#202028] rounded-b-xl ">
                 <TableHeader>
                     <TableRow>
                         <TableHead>Customer</TableHead>

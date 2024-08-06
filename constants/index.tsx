@@ -46,84 +46,101 @@ export const statsData: Stat[] = [
 ];
 
 
-
 export const feedbackData = [
     {
         name: "Jessie",
         rating: 5,
-        comment: "The food was excellent and so was the service. I had the mushroom risotto with scallops which was awesome."
+        comment: "The food was excellent and so was the service. I had the mushroom risotto with scallops which was awesome.",
+        src: "assets/img1.jpeg"
     },
     {
         name: "Robert",
         rating: 4,
-        comment: "We Enjoyed the eggs Benedict served on homemade focaccia bread and hot coffee."
+        comment: "We Enjoyed the eggs Benedict served on homemade focaccia bread and hot coffee.",
+        src: "assets/img2.jpeg"
     },
     {
         name: "Russell",
         rating: 3,
-        comment: "The food was excellent and so was the service. I had the mushroom risotto with scallops, which was awesome."
+        comment: "The food was excellent and so was the service. I had the mushroom risotto with scallops, which was awesome.",
+        src: "assets/img3.jpeg"
     },
     {
         name: "Emily",
         rating: 4,
-        comment: "The ambiance was perfect for a romantic dinner. I loved the grilled salmon with a side of roasted vegetables. Everything was cooked to perfection."
+        comment: "The ambiance was perfect for a romantic dinner. I loved the grilled salmon with a side of roasted vegetables. Everything was cooked to perfection.",
+        src: "assets/img4.jpeg"
     },
     {
         name: "Anna",
         rating: 5,
-        comment: "Best dining experience ever! The steak was perfectly cooked and the dessert was heavenly."
+        comment: "Best dining experience ever! The steak was perfectly cooked and the dessert was heavenly.",
+        src: "assets/img5.jpeg"
     },
     {
         name: "Mark",
         rating: 2,
-        comment: "The service was slow and the food was not as good as expected. Not a great experience."
+        comment: "The service was slow and the food was not as good as expected. Not a great experience.",
+        src: "assets/img6.jpeg"
     },
     {
         name: "Linda",
         rating: 4,
-        comment: "Great atmosphere and delicious food. The pasta was especially good."
+        comment: "Great atmosphere and delicious food. The pasta was especially good.",
+        src: "assets/img7.jpeg"
     },
     {
         name: "James",
         rating: 5,
-        comment: "Exceptional service and the seafood was incredibly fresh. Will definitely come back!"
+        comment: "Exceptional service and the seafood was incredibly fresh. Will definitely come back!",
+        src: "assets/img8.jpeg"
     },
     {
         name: "Sophia",
         rating: 3,
-        comment: "The food was good but a bit overpriced for the portion sizes."
+        comment: "The food was good but a bit overpriced for the portion sizes.",
+        src: "assets/img9.jpeg"
     },
     {
         name: "Michael",
         rating: 4,
-        comment: "Enjoyed the evening with friends. The wine selection was excellent."
+        comment: "Enjoyed the evening with friends. The wine selection was excellent.",
+        src: "assets/img10.jpeg"
     },
     {
         name: "Olivia",
         rating: 5,
-        comment: "Everything was perfect. The ambiance, the food, the service. Highly recommend."
+        comment: "Everything was perfect. The ambiance, the food, the service. Highly recommend.",
+        src: "assets/img11.jpeg"
     },
     {
         name: "Daniel",
         rating: 4,
-        comment: "Nice place for a family dinner. The kids loved the pizza and ice cream."
+        comment: "Nice place for a family dinner. The kids loved the pizza and ice cream.",
+        src: "assets/img12.jpeg"
     },
     {
         name: "Laura",
         rating: 3,
-        comment: "Decent food but the place was too noisy for my liking."
+        comment: "Decent food but the place was too noisy for my liking.",
+        src: "assets/img13.jpeg"
     },
     {
         name: "John",
         rating: 5,
-        comment: "Amazing experience! The chef's special was out of this world."
+        comment: "Amazing experience! The chef's special was out of this world.",
+        src: "assets/img14.jpeg"
     },
     {
         name: "Mia",
         rating: 2,
-        comment: "Not impressed. The food was bland and the service was lacking."
+        comment: "Not impressed. The food was bland and the service was lacking.",
+        src: "assets/img15.jpeg"
     }
 ];
+
+
+
 export const recentOrders = [
     {
         customer: "Wade Warren",
