@@ -53,14 +53,14 @@ const NavBar = () => {
         <div className='flex items-center justify-evenly md:justify-between bg-[#202028] p-3 ' >
             <div className='flex items-center'>
                 <div ref={sideBarRef}>
-                    <PiCirclesFourFill onClick={toggleSideBar} size={30} color='#7094fe' className=' mx-4' />
+                    <PiCirclesFourFill onClick={toggleSideBar} size={30} color='#7094fe' className=' mx-2' />
                 </div>
                 <div className=' flex items-center bg-dark-500 rounded-md p-1' >
                     <IoSearch className='mx-2' />
                     <input className='bg-dark-500 p-2' placeholder='Search...' />
                 </div>
             </div>
-            <div className=' flex md:hidden ' ref={menuRef}>
+            <div className=' flex md:hidden mx-2 ' ref={menuRef}>
                 <RxHamburgerMenu onClick={toggleMenu} />
             </div>
             {
