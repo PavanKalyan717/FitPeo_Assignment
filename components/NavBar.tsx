@@ -13,11 +13,6 @@ import { forwardRef } from 'react';
 import SideBar from './SideBar';
 
 
-// type RefReceiverProps = {
-//     ref: React.RefObject<HTMLDivElement>;
-
-// };
-
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +29,6 @@ const NavBar = () => {
         setSetsideBarOpen(!sideBarOpen)
     }
 
-    // const handleClick = () => {
-    //     if (ref.current?.style.display == 'none') {
-    //         ref.current.style.display = 'block';
-    //     }
-    //     else if (ref.current?.style.display == 'block') {
-    //         ref.current.style.display = 'none';
-    //     }
-    // }
     const handleClickOutside = (event: MouseEvent) => {
         if (sideBarRef.current && !sideBarRef.current.contains(event.target as Node)) {
             setSetsideBarOpen(false);
@@ -52,11 +39,7 @@ const NavBar = () => {
     };
 
     useEffect(() => {
-        // if (isOpen) {
-        //     document.addEventListener("mousedown", handleClickOutside);
-        // } else {
-        //     document.removeEventListener("mousedown", handleClickOutside);
-        // }
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -83,7 +66,7 @@ const NavBar = () => {
             {
                 isOpen && (
                     <div className=' absolute top-[74px] right-0 bg-[#25252b] z-10 rounded-lg p-4'>
-                        <div className=' flex flex-col gap-4'>
+                        <div className=' flex flex-col items-center gap-4'>
                             <Tooltip content="Mail" className=' bg-slate-500 rounded-xl text-white'>
                                 <button className=' bg-dark-500 p-2 rounded-full cursor-pointer'>
                                     <HiOutlineMail />

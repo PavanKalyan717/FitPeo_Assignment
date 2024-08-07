@@ -1,93 +1,70 @@
-"use client"
 
-import { TrendingUp } from "lucide-react"
-import {
-    Label,
-    PolarGrid,
-    PolarRadiusAxis,
-    RadialBar,
-    RadialBarChart,
-    ResponsiveContainer,
-} from "recharts"
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { ChartConfig, ChartContainer } from "@/components/ui/chart"
+import React from 'react';
+import { PieChart, Pie, ResponsiveContainer, Label, Cell } from 'recharts';
 
-const chartData = [
-    { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-]
+const data = [
+    { name: 'Completed', value: 70 }
+];
+const COLORS = ['#0088FE', '#FFFFFF'];
 
-const chartConfig = {
-    visitors: {
-        label: "Visitors",
-    },
-    safari: {
-        label: "Safari",
-        color: "hsl(var(--chart-2))",
-    },
-} satisfies ChartConfig
+const CustomLabel = () => (
+    <text
+        x="50%"
+        y="50%"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{
+            fontSize: '10px',
+            fontWeight: 'bold',
+            fill: '#FFF' // Setting text color to white
+        }}
+    >
+        <tspan x="50%" dy="-10">70%</tspan>
+        <tspan x="50%" dy="15">completed</tspan>
+    </text>
+);
 
-export function RadialChart() {
+const RadialChart: React.FC = () => {
     return (
-        <div className="flex justify-center items-center" style={{ width: 'auto', height: 'auto' }}>
-            <ResponsiveContainer width='100%' height="100%" className='bg-green-800'>
-                <RadialBarChart
-                    data={chartData}
-                    startAngle={0}
-                    endAngle={250}
-                    innerRadius="30%"
-                    outerRadius="80%"
-
-                >
-                    <PolarGrid
-                        gridType="circle"
-                        radialLines={false}
+        <div className="w-[140px] h-[120px] flex justify-center items-center">
+            <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                    {/* Background Pie */}
+                    <Pie
+                        data={[{ name: 'Background', value: 100 }]} // Full circle
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={35}
+                        outerRadius={55}
+                        startAngle={0}
+                        endAngle={360}
+                        fill="#293267" // White background
+                        paddingAngle={0}
+                        dataKey="value"
                         stroke="none"
-                        className="first:fill-muted last:fill-backgroundw-[150%] "
-                        polarRadius={[86, 74]}
-
                     />
-                    <RadialBar dataKey="visitors" background cornerRadius={10} />
-                    <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
-                        <Label
-                            content={({ viewBox }) => {
-                                if (viewBox && "cx" in viewBox && "cy" in viewBox) {
-                                    return (
-                                        <text
-                                            x={viewBox.cx}
-                                            y={viewBox.cy}
-                                            textAnchor="middle"
-                                            dominantBaseline="middle"
-                                        >
-                                            <tspan
-                                                x={viewBox.cx}
-                                                y={viewBox.cy}
-                                                className="fill-foreground text-4xl font-bold"
-                                            >
-                                                {chartData[0].visitors.toLocaleString()}
-                                            </tspan>
-                                            <tspan
-                                                x={viewBox.cx}
-                                                y={(viewBox.cy || 0) + 24}
-                                                className="fill-muted-foreground"
-                                            >
-                                                Visitors
-                                            </tspan>
-                                        </text>
-                                    )
-                                }
-                            }}
-                        />
-                    </PolarRadiusAxis>
-                </RadialBarChart>
+                    {/* Foreground Pie */}
+                    <Pie
+                        data={data} // Only use the "Completed" segment data
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={35}
+                        outerRadius={55}
+                        startAngle={90}
+                        endAngle={90 - 360 * (data[0].value / 100)} // 70% completion
+                        paddingAngle={0}
+                        dataKey="value"
+                        stroke="none"
+                        cornerRadius={10}
+                        fill={COLORS[0]}
+                    >
+                        <Label content={<CustomLabel />} />
+                    </Pie>
+                </PieChart>
             </ResponsiveContainer>
         </div>
-    )
-}
+    );
+};
+
+export default RadialChart;

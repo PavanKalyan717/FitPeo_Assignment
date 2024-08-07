@@ -13,6 +13,22 @@ import {
 
 import { activityData } from "@/constants"
 
+
+
+
+
+import * as React from "react"
+
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 const chartConfig = {
     value: {
         label: "Activity",
@@ -26,6 +42,18 @@ export function ActivityChart() {
             <div className="bg-[#202028] h-[240px] rounded-lg">
                 <div className="flex items-center justify-between px-4">
                     <p className=" font-extrabold text-2xl py-4 ">Activity Chart</p>
+                    <Select >
+                        <SelectTrigger className="w-[120px] border-none rounded-3xl bg-dark-500 ">
+                            <SelectValue className=" text-center" placeholder="Weekly" />
+                        </SelectTrigger>
+                        <SelectContent className=" bg-dark-500 rounded-lg border-none  " >
+                            <SelectGroup className="   ">
+                                <SelectItem value="weekly" className=" cursor-pointer" >Weekly</SelectItem>
+                                <SelectItem value="Monthly" className=" cursor-pointer" >Monthly</SelectItem>
+                                <SelectItem value="Yearly" className=" cursor-pointer">Yearly</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
                 </div>
                 <ChartContainer config={chartConfig}
                     className="h-[170px] w-full rounded-xl px-4"
