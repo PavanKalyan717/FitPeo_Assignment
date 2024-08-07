@@ -77,7 +77,7 @@ const SideBar: React.FC = () => {
             </div>
             <Tooltip content="Logout" className=' bg-slate-500 rounded-xl text-white'>
 
-                <div className='flex justify-center cursor-pointer my-8 md:mb-6 lg:mb-8'>
+                <div className='flex justify-center cursor-pointer my-8 md:mb-6 lg:mb-12'>
                     <RiLogoutCircleRLine size={30} />
                 </div>
             </Tooltip>

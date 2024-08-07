@@ -7,7 +7,7 @@ const CustomerFeedback = () => {
     return (
         <div className=' col-span-1 md:col-span-2 w-full bg-[#202028] rounded-xl p-4'>
             <p className='font-extrabold text-xl py-4'>Customer&apos;s Feedback</p>
-            <div className='h-[320px] overflow-y-auto'>
+            <div className='h-[370px] overflow-y-auto'>
                 {feedbackData.map((feedback, index) => (
                     <div key={index} className='pb-2 border-[0.5px] border-b-[#a8a8a8] border-t-0 border-x-0'>
                         <div className='flex items-center gap-2 py-3'>
