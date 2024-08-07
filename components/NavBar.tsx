@@ -50,7 +50,7 @@ const NavBar = () => {
 
 
     return (
-        <div className='flex items-center justify-between bg-[#202028] p-3 ' >
+        <div className='flex items-center justify-evenly md:justify-between bg-[#202028] p-3 ' >
             <div className='flex items-center'>
                 <div ref={sideBarRef}>
                     <PiCirclesFourFill onClick={toggleSideBar} size={30} color='#7094fe' className=' mx-4' />
@@ -60,7 +60,7 @@ const NavBar = () => {
                     <input className='bg-dark-500 p-2' placeholder='Search...' />
                 </div>
             </div>
-            <div className=' flex md:hidden px-10' ref={menuRef}>
+            <div className=' flex md:hidden ' ref={menuRef}>
                 <RxHamburgerMenu onClick={toggleMenu} />
             </div>
             {
