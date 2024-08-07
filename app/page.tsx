@@ -22,7 +22,7 @@ export default function Home() {
         <div className=" w-[0%] md:w-[4%] ">
           <SideBar />
         </div>
-        <div className="w-[100%] md:w-[96%] ">
+        <div className="w-[100%] md:w-[96%]  ">
           <NewDashBoard />
         </div>
       </div>

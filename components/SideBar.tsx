@@ -27,7 +27,7 @@ const SideBar: React.FC = () => {
 
 
     return (
-        <div className='bg-inherit md:bg-[#202028] flex flex-col justify-between h-[90vh] md:fixed md:w-16 '>
+        <div className='bg-inherit md:bg-[#202028] flex flex-col justify-between h-[94vh] md:fixed md:w-16 '>
             <div className='flex flex-col gap-8 pt-4'>
 
                 <Tooltip content="Home" className=' bg-slate-500 rounded-xl text-white'>
@@ -77,7 +77,7 @@ const SideBar: React.FC = () => {
             </div>
             <Tooltip content="Logout" className=' bg-slate-500 rounded-xl text-white'>
 
-                <div className='flex justify-center cursor-pointer my-8 md:mb-4'>
+                <div className='flex justify-center cursor-pointer my-8 md:mb-6 lg:mb-8'>
                     <RiLogoutCircleRLine size={30} />
                 </div>
             </Tooltip>
