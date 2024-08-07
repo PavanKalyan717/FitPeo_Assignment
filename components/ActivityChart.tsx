@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/chart"
 
 import { activityData } from "@/constants"
-import { monthlyData } from "@/constants"; // Adjust the path
-import { yearlyData } from "@/constants"; // Adjust the path
+import { monthlyData } from "@/constants"
+import { yearlyData } from "@/constants"
 
 import * as React from "react"
 import { useState } from "react"
@@ -20,7 +20,6 @@ import {
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
@@ -38,6 +37,16 @@ export function ActivityChart() {
     const data = period === 'weekly' ? activityData :
         period === 'monthly' ? monthlyData :
             yearlyData;
+
+    // Format for XAxis labels in yearly data
+    const formatXAxis = (value: number): string => {
+        if (period === 'yearly') {
+            // Format the year value to show every 3rd year and return as a string
+            return (value % 3 === 0) ? `'${value.toString().slice(-2)}` : '';
+        }
+        return value.toString(); // Ensure the return value is always a string
+    };
+
 
     return (
         <div className="col-span-1 md:col-span-4">
@@ -73,7 +82,7 @@ export function ActivityChart() {
                             tickLine={false}
                             tickMargin={10}
                             axisLine={false}
-                            tickFormatter={(value) => (period === 'yearly' ? (value % 3 === 0 ? value : '') : (period === 'monthly' ? value.slice(0, 3) : (value % 2 === 0 ? '' : value)))}
+                            tickFormatter={formatXAxis}
                         />
                         <YAxis
                             dataKey="value"

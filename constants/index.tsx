@@ -138,47 +138,51 @@ export const feedbackData = [
         src: "assets/img15.jpeg"
     }
 ];
-
-
-
 export const recentOrders = [
     {
         customer: "Wade Warren",
         orderNo: "15478256",
         amount: "$124.00",
-        status: "Delivered"
+        status: "Delivered",
+        src: "assets/img5.jpeg"
     },
     {
         customer: "Jane Cooper",
         orderNo: "48965786",
         amount: "$365.02",
-        status: "Delivered"
+        status: "Delivered",
+        src: "assets/img2.jpeg"
     },
     {
         customer: "Guy Hawkins",
         orderNo: "78958215",
         amount: "$54.88",
-        status: "Cancelled"
+        status: "Cancelled",
+        src: "assets/img3.jpeg"
     },
     {
         customer: "Kristin Watson",
         orderNo: "20965732",
         amount: "$65.00",
-        status: "Pending"
+        status: "Pending",
+        src: "assets/img6.jpeg"
     },
     {
         customer: "Cody Fisher",
         orderNo: "95715620",
         amount: "$545.00",
-        status: "Delivered"
+        status: "Delivered",
+        src: "assets/img1.jpeg"
     },
     {
         customer: "Savannah Nguyen",
         orderNo: "78514568",
         amount: "$128.20",
-        status: "Delivered"
+        status: "Delivered",
+        src: "assets/img4.jpeg"
     }
 ];
+
 export interface ActivityData {
     day: number;
     value: number;
@@ -241,15 +245,7 @@ export interface YearlyData {
 }
 
 export const yearlyData: YearlyData[] = [
-    { year: 2000, value: 12000 },
-    { year: 2001, value: 9000 },
-    { year: 2002, value: 15000 },
-    { year: 2003, value: 11000 },
-    { year: 2004, value: 6000 },
-    { year: 2005, value: 12000 },
-    { year: 2006, value: 7000 },
-    { year: 2007, value: 13000 },
-    { year: 2008, value: 15000 },
+
     { year: 2009, value: 8000 },
     { year: 2010, value: 10000 },
     { year: 2011, value: 9000 },

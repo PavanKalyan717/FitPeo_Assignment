@@ -89,6 +89,7 @@
 // }
 
 import { recentOrders } from "@/constants";
+import Image from "next/image";
 import {
     Table,
     TableBody,
@@ -103,13 +104,12 @@ import {
 export function RecentOrders() {
     return (
         <div className=" col-span-1 md:col-span-4 ">
-            {/* <p className="bg-[#202028] px-4  font-extrabold text-2xl rounded-t-xl ">Recent Orders</p> */}
             <div className="flex items-center justify-between px-4 bg-[#202028] rounded-t-xl">
                 <p className=" font-extrabold text-2xl py-2 ">Recent Orders</p>
             </div>
             <Table className="bg-[#202028] rounded-b-xl ">
-                <TableHeader>
-                    <TableRow>
+                <TableHeader >
+                    <TableRow className=" border-[#a8a8a8]" >
                         <TableHead>Customer</TableHead>
                         <TableHead>Order No</TableHead>
                         <TableHead>Amount</TableHead>
@@ -118,8 +118,16 @@ export function RecentOrders() {
                 </TableHeader>
                 <TableBody>
                     {recentOrders.map((order) => (
-                        <TableRow key={order.orderNo}>
-                            <TableCell className="font-medium">{order.customer}</TableCell>
+                        <TableRow key={order.orderNo} className=" border-[#a8a8a8] ">
+                            <TableCell className="font-medium">
+                                <div className="flex items-center gap-2 ">
+                                    <div className='relative bg-dark-500  rounded-full overflow-hidden w-8 h-8'>
+                                        <Image src={`/${order.src}`} alt={order.customer} className=' object-cover rounded-full'
+                                            layout='fill' />
+                                    </div>
+                                    {order.customer}
+                                </div>
+                            </TableCell>
                             <TableCell>{order.orderNo}</TableCell>
                             <TableCell className="">{order.amount}</TableCell>
                             <TableCell className=''>

@@ -9,7 +9,7 @@ const CustomerFeedback = () => {
             <p className='font-extrabold text-xl py-4'>Customer&apos;s Feedback</p>
             <div className='h-[320px] overflow-y-auto'>
                 {feedbackData.map((feedback, index) => (
-                    <div key={index} className='pb-2'>
+                    <div key={index} className='pb-2 border-[0.5px] border-b-[#a8a8a8] border-t-0 border-x-0'>
                         <div className='flex items-center gap-2 py-3'>
                             <div className='relative bg-dark-500 p-2 rounded-full overflow-hidden w-10 h-10'>
                                 <Image src={`/${feedback.src}`} alt={feedback.name} className=' object-cover rounded-full'

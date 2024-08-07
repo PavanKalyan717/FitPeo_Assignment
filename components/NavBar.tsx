@@ -125,7 +125,7 @@ const NavBar = () => {
                 </Tooltip>
 
                 <div className='relative bg-dark-500 p-2 rounded-full overflow-hidden w-10 h-10 cursor-pointer'>
-                    <Image src='/assets/navlogo.jpeg' alt="" className=' object-cover rounded-full'
+                    <Image src='/assets/img5.jpeg' alt="" className=' object-cover rounded-full'
                         layout='fill' />
                 </div>
 
