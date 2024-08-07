@@ -60,7 +60,7 @@ const NavBar = () => {
                     <input className='bg-dark-500 p-2' placeholder='Search...' />
                 </div>
             </div>
-            <div className=' flex md:hidden' ref={menuRef} >
+            <div className=' flex md:hidden px-10' ref={menuRef}>
                 <RxHamburgerMenu onClick={toggleMenu} />
             </div>
             {
