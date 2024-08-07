@@ -212,3 +212,57 @@ export const activityData: ActivityData[] = [
     { day: 28, value: 8000 },
     { day: 29, value: 6000 },
 ];
+
+
+export interface MonthlyData {
+    month: string; // Format: Jan, Feb, Mar, etc.
+    value: number;
+}
+
+export const monthlyData: MonthlyData[] = [
+    { month: 'Jan', value: 12000 },
+    { month: 'Feb', value: 9000 },
+    { month: 'Mar', value: 8000 },
+    { month: 'Apr', value: 15000 },
+    { month: 'May', value: 11000 },
+    { month: 'Jun', value: 6000 },
+    { month: 'Jul', value: 12000 },
+    { month: 'Aug', value: 7000 },
+    { month: 'Sep', value: 13000 },
+    { month: 'Oct', value: 15000 },
+    { month: 'Nov', value: 8000 },
+    { month: 'Dec', value: 10000 },
+];
+
+
+export interface YearlyData {
+    year: number; // Format: 2000, 2001, etc.
+    value: number;
+}
+
+export const yearlyData: YearlyData[] = [
+    { year: 2000, value: 12000 },
+    { year: 2001, value: 9000 },
+    { year: 2002, value: 15000 },
+    { year: 2003, value: 11000 },
+    { year: 2004, value: 6000 },
+    { year: 2005, value: 12000 },
+    { year: 2006, value: 7000 },
+    { year: 2007, value: 13000 },
+    { year: 2008, value: 15000 },
+    { year: 2009, value: 8000 },
+    { year: 2010, value: 10000 },
+    { year: 2011, value: 9000 },
+    { year: 2012, value: 8500 },
+    { year: 2013, value: 9500 },
+    { year: 2014, value: 11000 },
+    { year: 2015, value: 12000 },
+    { year: 2016, value: 13000 },
+    { year: 2017, value: 14000 },
+    { year: 2018, value: 11000 },
+    { year: 2019, value: 12000 },
+    { year: 2020, value: 10000 },
+    { year: 2021, value: 10500 },
+    { year: 2022, value: 12500 },
+    { year: 2023, value: 13000 },
+];
